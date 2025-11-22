@@ -12,12 +12,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // Kategory::insert([
-        //     'name' => 'laravel',
-        //     'description' => 'pframework laravel',
-        //     'created_at' => now(),
-        //     'updated_at' => now()
-        // ]);
+
         $kategories = Kategory::all();
 
         return view('welcome', compact('kategories'));
@@ -28,7 +23,12 @@ class HomeController extends Controller
      */
     public function kategori()
     {
-        //
+        Kategory::insert([
+            'name' => 'laravel',
+            'description' => 'pframework laravel',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
     }
 
     /**
